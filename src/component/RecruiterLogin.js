@@ -42,7 +42,7 @@ export default function RecruiterLogin() {
             <form className="form">
             <h1 className="logo-centered">Welcome,Recruiter</h1>
                 <div className="form-group">
-                    <label for='email'>Email:</label>
+                    <label htmlFor='email'>Email:</label>
                     <input type="email" className="form-control" name="email" id="email" onChange={UpdateEmail} placeholder="Enter your email"></input>
 
                     {
@@ -51,7 +51,7 @@ export default function RecruiterLogin() {
                 </div>
                 <br />
                 <div className="form-group">
-                    <label for='password'>Password:</label>
+                    <label htmlFor='password'>Password:</label>
                     <input type="password" name="password" onChange={UpdatePassword} className="form-control" id="password" placeholder="Enter your password"></input>
                     {
                         !isvalidPassword && <label className="error">Enter Valid Password</label>

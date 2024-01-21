@@ -40,7 +40,7 @@ export default function JobSeekerLogin() {
             <form className="form">
                 <h1 className="logo-centered">Welcome</h1>
                 <div className="form-group">
-                    <label for='email'>Email:</label>
+                    <label htmlFor='email'>Email:</label>
                     <input type="email" className="form-control" name="email" onChange={UpdateEmail} id="email" placeholder="Enter your email"></input>
                     {
                         !isvalidEmail && <label className="error">Enter Valid Email</label>
@@ -48,7 +48,7 @@ export default function JobSeekerLogin() {
                 </div>
                 <br />
                 <div className="form-group">
-                    <label for='password'>Password:</label>
+                    <label htmlFor='password'>Password:</label>
                     <input type="password" name="password" className="form-control" id="password" onChange={Updatepass} placeholder="Enter your password"></input>
                     {
                         !isvalidPass && <label className="error">Enter Valid Password</label>

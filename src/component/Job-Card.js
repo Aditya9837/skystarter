@@ -10,10 +10,10 @@ export default function JobCard(props) {
                         <h5 className="card-title">Job ID: {data.job_id}</h5>
                         <h6 className="card-subtitle mb-2 text-muted">Company Name: {data.company_name}</h6>
                         <img src={logo} className='icon-size'></img>
-                        <table className="table">
+                        <table className='table table-hover'>
                             <tbody>
                                 <tr>
-                                    <th scope="row">Job Role</th>
+                                    <th  scope="row">Job Role</th>
                                     <td>{data.job_role}</td>
                                 </tr>
                                 <tr>

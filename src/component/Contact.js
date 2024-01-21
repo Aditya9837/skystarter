@@ -22,28 +22,31 @@ export default function Contact() {
     return (
         <>
             <div class="container mt-5 pad10">
-                <form>
+                <div  className="logo-centered">
+                    <h2>Contact Us</h2>
+                </div>
+                <form className="form">
                     <div class="form-group">
-                        <label for="name">Name</label>
+                        <label htmlFor="name">Name</label>
                         <input type="text" class="form-control" id="name" placeholder="Enter your name" />
                     </div>
                     <div class="form-group">
-                        <label for="email">Email</label>
+                        <label htmlFor="email">Email</label>
                         <input type="email" class="form-control" onChange={UpdateEmail} id="email" placeholder="Enter your email" />
                         {
                             !isvalidEmail && <label className="error" >Enter Valid Email</label>
                         }
                     </div>
                     <div class="form-group">
-                        <label for="phone">Phone</label>
+                        <label htmlFor="phone">Phone</label>
                         <input type="phone" class="form-control" id="phone" placeholder="Enter your mobile number" />
                     </div>
                     <div class="form-group">
-                        <label for="subject">Subject</label>
+                        <label htmlFor="subject">Subject</label>
                         <input type="text" class="form-control" id="subject" placeholder="Enter the subject" />
                     </div>
                     <div class="form-group">
-                        <label for="message">Message</label>
+                        <label htmlFor="message">Message</label>
                         <textarea class="form-control" id="message" rows="4" placeholder="Enter your message"></textarea>
                     </div>
                     <br />
