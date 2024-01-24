@@ -1,10 +1,37 @@
-* {
-    
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+* {    
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0px;
     padding: 0px;
 }
+body{
+   
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+   
+    height: 100vh; /* Set the height to 100% of the viewport height */
+ 
+  background-image: url(./image/bg-image.png);
+}
 
+.form-control1{
+    width: 100%;
+    border-radius: 200px;
+    background: transparent;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 1px solid black;
+    height: 30px;
+   
+   
+}
+.blur{
+    padding: 10px;
+    backdrop-filter: blur(5px);
+    border: .2px solid rgb(203, 200, 200);
+    border-radius: 5px;
+    box-shadow: 2px  4px 8px rgb(160, 149, 236);
+}
 
 .active1 {
     color: blue;
@@ -95,22 +122,30 @@
     padding-top: 10px;
     padding-left: 1%;
     padding-right: 1%;
+    backdrop-filter: blur(5px);
     background-color: rgb(242, 248, 248);
-    width: 16%;
+    width: 26%;
     height: 100vh;
+    overflow-y: auto;
     /* Set sidebar height to full viewport height */
 
 }
-
+.width{
+    width: 26%;
+}
 .maincontent {
 
-    width: 80%;
+    width: 70%;
     height: 100vh;
     /* Set sidebar height to full viewport height */
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 .text-center{
     text-align: center;
+}
+.align-center{
+    text-align: center;
+    line-height: 1px;
 }
 
 .center {
@@ -169,11 +204,9 @@
     width: 30%;
     background-color: rgb(216, 225, 225);
 }
-
 .linkedin:hover {
     color: rgb(10, 102, 194);
 }
-
 .instagram:hover {
     color: rgb(214, 41, 118);
 }
@@ -187,15 +220,23 @@
 .google:hover {
     color: rgb(244, 160, 0);
 }
-
 .form {
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 30%;
     padding-right: 30%;
 }
-
-
+.user-dp{
+    width: 150px;
+    height: 150px;
+    border-radius: 60px;
+}
+.data-card{
+    border-radius: 10px;
+    flex-grow: 3px;
+    box-shadow: 2px 4px 12px rgb(160, 149, 236);
+    background-color: rgb(234, 236, 242);
+}
 @media screen and (max-width:400px) {
     .form {
         padding-left: 10%;
@@ -211,9 +252,7 @@
         height: 500px;
         width: 80%;
         background-color: rgb(216, 225, 225);
-    }
-
-  
+    }  
 }
 
 @media screen and (max-width:700px) {

@@ -38,10 +38,12 @@ export default function JobSeekerLogin() {
 
 
             <form className="form">
+                <div className="blur">
+                    
                 <h1 className="logo-centered">Welcome</h1>
                 <div className="form-group">
                     <label htmlFor='email'>Email:</label>
-                    <input type="email" className="form-control" name="email" onChange={UpdateEmail} id="email" placeholder="Enter your email"></input>
+                    <input type="email" className="form-control1" name="email" onChange={UpdateEmail} id="email" placeholder="Enter your email"></input>
                     {
                         !isvalidEmail && <label className="error">Enter Valid Email</label>
                     }
@@ -49,15 +51,16 @@ export default function JobSeekerLogin() {
                 <br />
                 <div className="form-group">
                     <label htmlFor='password'>Password:</label>
-                    <input type="password" name="password" className="form-control" id="password" onChange={Updatepass} placeholder="Enter your password"></input>
+                    <input type="password" name="password" className="form-control1" id="password" onChange={Updatepass} placeholder="Enter your password"></input>
                     {
                         !isvalidPass && <label className="error">Enter Valid Password</label>
                     }
                 </div>
                 <br />
                 <input type="submit" className="btn btn-primary" value='Login'></input>
-                <p>If You dont have account<i className="fa fa-question"></i> <Link to='/jobseeker'> click here</Link></p>
+                <p>If You dont have account<i className="fa fa-question"></i> <Link to='/jobseekerRegister'>&nbsp;click here</Link></p>
 
+                </div>
             </form>
         </>
     );
