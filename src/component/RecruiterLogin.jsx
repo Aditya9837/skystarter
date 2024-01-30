@@ -56,6 +56,7 @@ export default function RecruiterLogin() {
             }
             else if(response.data['data']['id']!=null){
                 Cookies.set('isRecruiterLoggedIn',true)
+                Cookies.set('isJobSeekerLoggedIn',false)
                 Cookies.set('Recruitername',response.data['data']['contact_person'])
                 Cookies.set('Recruiteremail',response.data['data']['username'])
                 Cookies.set('companyName',response.data['data']['company_name'])

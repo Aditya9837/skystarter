@@ -388,7 +388,395 @@ body{
   .job-requirements li {
     margin-bottom: 5px;
   }
+
+
+
+  /*css for jobseeker profile   */
   
+/* JobseekerProfile.css */
+
+/* Container styles */
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Header styles */
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.profile-user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-username {
+    font-size: 24px;
+    margin: 0;
+    color: #333;
+}
+
+.profile-email {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #555;
+}
+
+.profile-verify-link {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 14px;
+}
+
+/* Content section styles */
+.profile-content {
+    width: 100%;
+    max-width: 800px;
+}
+
+.profile-section {
+    margin-bottom: 30px;
+}
+
+/* Add button styles */
+.add-button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.add-button:hover {
+    background-color: #218838;
+}
+
+/* Profile item styles */
+.profile-item {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.profile-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Action button styles */
+.action-buttons {
+    margin-top: 10px;
+}
+
+.edit-button, .delete-button {
+    padding: 5px 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.edit-button {
+    background-color: #007bff;
+    color: white;
+}
+
+.edit-button:hover {
+    background-color: #0056b3;
+}
+
+.delete-button {
+    background-color: #dc3545;
+    color: white;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
+
+/*css for the footer*/
+.footer-container {
+    background-color: #f4f4f4;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    color: #333;
+}
+
+.footer-logo img {
+    width: 100px;
+    height: auto;
+}
+
+.footer-social {
+    display: flex;
+    align-items: center;
+}
+
+.footer-social a {
+    margin-right: 10px;
+    color: #333;
+}
+
+.footer-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-info ul li {
+    margin-bottom: 5px;
+}
+
+.footer-info ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.footer-contact {
+    margin-top: 20px;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+}
+
+.footer-copy {
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Css for terms of service */
+
+
+.terms-of-service {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.terms-of-service h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.terms-of-service h2 {
+    font-size: 26px;
+    margin-top: 30px;
+    color: #555;
+}
+
+.terms-of-service p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.terms-of-service ul {
+    margin-bottom: 15px;
+}
+
+.terms-of-service ul li {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.terms-of-service ul li::before {
+    content: "\2022";
+    color: #666;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.terms-of-service ul li + li {
+    margin-top: 5px;
+}
+
+.terms-of-service a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.terms-of-service a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+
+/* Css for policies page */
+
+.privacy-policy {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.privacy-policy h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.privacy-policy h2 {
+    font-size: 26px;
+    margin-top: 30px;
+    color: #555;
+}
+
+.privacy-policy p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.privacy-policy ul {
+    margin-bottom: 15px;
+}
+
+.privacy-policy ul li {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.privacy-policy ul li::before {
+    content: "\2022";
+    color: #666;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.privacy-policy ul li + li {
+    margin-top: 5px;
+}
+
+.privacy-policy a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.privacy-policy a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+
+/* Css for about us page */
+
+.about-us {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.technical-image {
+    width: 200px;
+    margin-right: 20px;
+    animation: slideIn 1s ease-in-out;
+}
+
+.text-content {
+    flex: 1;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+li {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 5px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+
+
+/* Add more styles as needed */
+
   
 @media screen and (max-width:400px) {
     .form {

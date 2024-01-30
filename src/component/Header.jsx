@@ -52,9 +52,12 @@ export default function Header() {
 
                                 </ul>
                             </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/">Profile</Link>
-                            </li>
+                           {Cookies.get('isJobSeekerLoggedIn')=='true' &&  <li className="nav-item">
+                                <Link className="nav-link" to="/jobseekerprofile">Jobseeker Profile</Link>
+                            </li>}
+                           {Cookies.get('isRecruiterLoggedIn')=='true' &&  <li className="nav-item">
+                                <Link className="nav-link" to="/jobseekerprofile">Recruiter Profile</Link>
+                            </li>}
                             <li className="nav-item">
                                 <Link className="nav-link" to="/contact">Contact us</Link>
                             </li>

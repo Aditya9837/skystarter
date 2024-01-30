@@ -17,6 +17,10 @@ import RecruiterHome from './component/RecruiterHome';
 import AddEducation from './component/AddEducation'
 import AddSkill from './component/AddSkills'
 import Otp from './component/Otp';
+import JobseekerProfile from './component/Profile';
+import TermsOfService from './component/TermsOfService';
+import PrivacyPolicy from './component/Policies';
+import AboutUs from './component/AboutUs';
 
 
 function App() {
@@ -38,6 +42,10 @@ function App() {
       <Route path='/addEducation' element={<AddEducation></AddEducation>}></Route>
       <Route path='/addSkill' element={<AddSkill></AddSkill>}></Route>
       <Route path='/otpform' element={<Otp></Otp>}></Route>
+      <Route path='/jobseekerprofile' element={<JobseekerProfile></JobseekerProfile>}></Route>
+      <Route path='/termsofservice' element={<TermsOfService></TermsOfService>}></Route>
+      <Route path='/policies' element={<PrivacyPolicy></PrivacyPolicy>}></Route>
+      <Route path='about' element={<AboutUs></AboutUs>}></Route>
       
      </Routes>
     

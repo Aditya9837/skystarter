@@ -43,6 +43,7 @@ export default function JobSeekerLogin() {
             }
             else if (response.data['data']['id'] != null) {
                 Cookies.set('isJobSeekerLoggedIn', true)
+                Cookies.set('isRecruiterLoggedIn',false)
                 Cookies.set('username', response.data['data']['first_name'])
                 Cookies.set('useremail', response.data['data']['username'])
                 Cookies.set('user_id', response.data['data']['id'])
