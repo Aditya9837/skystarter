@@ -1,5 +1,10 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
+
+
+
 * {    
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0px;
     padding: 0px;
 }
@@ -8,10 +13,7 @@ body{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-   
     height: 100vh; /* Set the height to 100% of the viewport height */
- 
-  /* background-image: url(./image/bg-image.png); */
 }
 
 
@@ -23,34 +25,7 @@ body{
     box-shadow: 2px  4px 8px rgb(160, 149, 236);
 }
 
-.active1 {
-    color: blue;
-}
 
-.heading-color {
-    color: blue;
-}
-
-.paragraph-color {
-    color: rgb(73, 73, 238);
-}
-
-.Footer {
-    background-color: rgb(53, 53, 66);
-    color: rgb(148, 145, 145);
-    padding: 20px;
-   
-}
-
-.Footer p {
-    text-align: center;
-}
-
-.social-logo {
-    display: flex;
-    justify-content: space-around;
-
-}
 
 .icon-size {
     border-radius: 20px;
@@ -266,12 +241,7 @@ body{
     width: 30%;
     background-color: rgb(216, 225, 225);
 }
-.linkedin:hover {
-    color: rgb(10, 102, 194);
-}
-.instagram:hover {
-    color: rgb(214, 41, 118);
-}
+
 .top-right{
     padding-top: 5px;
     padding-right: 5px;
