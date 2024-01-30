@@ -1,3 +1,4 @@
+import Cookies from 'js-cookie';
 import logo from './image/logo.png'
 export default function JobCard(props) {
     return (
@@ -5,11 +6,12 @@ export default function JobCard(props) {
            {props.jobData.map(
             (data,index)=>(
                 <div className="container mt-5">
-                <div className="card">
-                    <div className="card-body">
+                <div className="my-card">
+
+                    <div className="card-body" onClick={()=>Cookies.set('current_job_index',index)}>
                         <h5 className="card-title">Job ID: {data.job_id}</h5>
-                        <h6 className="card-subtitle mb-2 text-muted">Company Name: {data.company_name}</h6>
-                        <img src={logo} className='icon-size'></img>
+                        <h6 className="card-subtitle mb-2 text-muted">Company Name: {data.employer_name}</h6>
+                       
                         <table className='table table-hover'>
                             <tbody>
                                 <tr>
@@ -33,8 +35,16 @@ export default function JobCard(props) {
                                     <td>{data.salary}</td>
                                 </tr>
                                 <tr>
+                                    <th scope="row">Deadline</th>
+                                    <td>{data.deadline}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Location</th>
+                                    <td>{data.location}</td>
+                                </tr>
+                                <tr>
                                     <th scope="row">Apply Now</th>
-                                    <td><a href="#" className="card-link">Apply Now</a></td>
+                                    <td><a href={data.link} className="card-link">Apply Now</a></td>
                                 </tr>
                             </tbody>
                         </table>

@@ -16,11 +16,13 @@ import JobSeekerHome from './component/JobSeekerHome';
 import RecruiterHome from './component/RecruiterHome';
 import AddEducation from './component/AddEducation'
 import AddSkill from './component/AddSkills'
+import Otp from './component/Otp';
 
 
 function App() {
   return (
     <>
+
     <Header/>
      <Routes>
       <Route path='/' element={<Home></Home>}></Route>
@@ -35,9 +37,10 @@ function App() {
       <Route path='/addExperience' element={<AddExperience></AddExperience>}></Route>
       <Route path='/addEducation' element={<AddEducation></AddEducation>}></Route>
       <Route path='/addSkill' element={<AddSkill></AddSkill>}></Route>
+      <Route path='/otpform' element={<Otp></Otp>}></Route>
       
      </Routes>
-    <Footer/>
+    
     </>
   );
 }

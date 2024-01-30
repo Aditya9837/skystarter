@@ -16,7 +16,7 @@ export default function Footer(){
               <i className="fa fa-facebook icon-size linkedin"></i>
               </a>
               <p>/</p>
-              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/skystarter.life?igsh=Z3V5NDJyNHhwOHow" target="_blank" rel="noopener noreferrer">
               <i className="fa fa-instagram icon-size instagram"></i>
               </a>
               <p>/</p>
@@ -24,7 +24,7 @@ export default function Footer(){
               <i className="fa fa-google icon-size google"></i>
               </a>
               <p>/</p>
-              <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://x.com/LifeSkystarter?t=fRLIvBpRcakpTx4JU-fr-A&s=08" target="_blank" rel="noopener noreferrer">
               <i className="fa fa-twitter icon-size linkedin"></i>
               </a>
               </div>

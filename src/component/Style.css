@@ -11,20 +11,10 @@ body{
    
     height: 100vh; /* Set the height to 100% of the viewport height */
  
-  background-image: url(./image/bg-image.png);
+  /* background-image: url(./image/bg-image.png); */
 }
 
-.form-control1{
-    width: 100%;
-    border-radius: 200px;
-    background: transparent;
-    padding-left: 20px;
-    padding-right: 20px;
-    border: 1px solid black;
-    height: 30px;
-   
-   
-}
+
 .blur{
     padding: 10px;
     backdrop-filter: blur(5px);
@@ -49,6 +39,7 @@ body{
     background-color: rgb(53, 53, 66);
     color: rgb(148, 145, 145);
     padding: 20px;
+   
 }
 
 .Footer p {
@@ -74,16 +65,19 @@ body{
     margin-bottom: 20px;
 }
 
-.card {
-    background: linear-gradient(45deg, rgb(245, 116, 116),rgb(150, 150, 247),rgb(237, 247, 237),rgb(126, 210, 233));
+.my-card {
+    
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+   
+}
+.custom-card {
+    background-color: #f1f6f9; /* Nude color */
+    border: .3px solid #a09b96; /* Border color */
 }
 
-.job-card-color{
-    background-color: transparent;
-}
+
 .reverse {
     background-color: aliceblue;
     display: flex;
@@ -108,6 +102,7 @@ body{
 
 .jobs {
     display: flex;
+
 }
 
 .control {
@@ -117,22 +112,89 @@ body{
 .pad10 {
     padding: 10px;
 }
-
 .sidebar {
     padding-top: 10px;
     padding-left: 1%;
     padding-right: 1%;
     backdrop-filter: blur(5px);
-    background-color: rgb(242, 248, 248);
-    width: 26%;
+    
+    width: 25%;
     height: 100vh;
-    overflow-y: auto;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    transition: 0.5s;
+    resize: horizontal;
+}
+    /* Set sidebar height to full viewport height */
+
+.jobseeker-sidebar {
+        padding-top: 10px;
+        /* padding-left: 1%;
+        padding-right: 1%; */
+        backdrop-filter: blur(5px);
+        width: 35%;
+        background-color: #e5edf2;
+        height: 100vh;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        transition: 0.5s;
+        resize: horizontal;
+
+}
+.sidebar-job{
+    padding-top: 10px;
+    padding-left: 1%;
+    padding-right: 1%;
+    backdrop-filter: blur(5px);
+    width: 40%;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    transition: 0.5s;
+    resize: horizontal;
     /* Set sidebar height to full viewport height */
 
 }
+.sidebar ::after{
+    padding-top: 10px;
+    padding-left: 1%;
+    padding-right: 1%;
+    backdrop-filter: blur(5px);
+    background-color: rgb(233, 247, 247);
+    width: 40%;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    transition: 0.5s;
+    resize: horizontal;
+    pointer-events: none;
+    /* Set sidebar height to full viewport height */
+
+}
+.float-error{
+    width: max-content;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    border-radius: 10px;
+    position: fixed;
+    text-align: center;
+    z-index: 9999;
+    display: none;
+    background-color: rgb(226, 241, 92);
+}
+
 .width{
     width: 26%;
 }
+.delete-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
 .maincontent {
 
     width: 70%;
@@ -231,16 +293,107 @@ body{
     height: 150px;
     border-radius: 60px;
 }
-.data-card{
-    border-radius: 10px;
+/* .data-card{
+    border-radius: 5px;
     flex-grow: 3px;
-    box-shadow: 2px 4px 12px rgb(160, 149, 236);
+    box-shadow: 2px 4px 12px rgb(205, 200, 240);
     background-color: rgb(234, 236, 242);
+} */
+
+.skill-card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+.otp-input{
+    border-radius: 4px;
+    border: 1px solid rgb(230, 227, 227);
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+    font-size: x-large;
+    text-align: center;
+    font-weight: bolder;
 }
+  .skill-header {
+    padding: 16px;
+    background-color: #5591b9;
+    color: #fff;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  .skill-body {
+    padding: 16px;
+  }
+  
+  .skill-name {
+    margin: 0;
+  }
+  
+  .skill-details {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .detail-label {
+    font-weight: bold;
+  }
+  
+  .detail-value {
+    margin-left: 10px;
+  }
+
+
+
+  .job-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .job-header {
+    margin-bottom: 10px;
+    
+    
+  }
+  
+  .job-title {
+    margin: 0;
+    
+  }
+  
+  .job-location {
+    margin: 0;
+    color: #666666;
+  }
+  
+  .job-body {
+    margin-bottom: 10px;
+  }
+  
+  .job-description {
+    color: #444444;
+  }
+  
+  .job-requirements {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .job-requirements li {
+    margin-bottom: 5px;
+  }
+  
+  
 @media screen and (max-width:400px) {
     .form {
-        padding-left: 10%;
-        padding-right: 10%;
+        padding-left: 1%;
+        padding-right: 1%;
     }
     .chat-window{
         display: none;

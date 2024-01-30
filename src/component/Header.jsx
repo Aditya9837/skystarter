@@ -1,8 +1,32 @@
 import Logo from './image/logo.png'
 import Style from './Style.css'
 import { Link } from 'react-router-dom';
+import Cookies from 'js-cookie';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 export default function Header() {
+    const nevigate=useNavigate()
+    const logout=()=>{
+             if(Cookies.get('isRecruiterLoggedIn')=='true'){
+                Cookies.set('isRecruiterLoggedIn',false)
+                Cookies.set('Recruitername',null)
+                Cookies.set('Recruiteremail',null)
+                Cookies.set('companyName',null)
+                Cookies.set('Recruiterid',null)
+                nevigate('/recruiterLogin')
+             }
+             else if(Cookies.get('isJobSeekerLoggedIn')=='true'){
+                Cookies.set('isJobSeekerLoggedIn',false)
+                Cookies.set('username','')
+                Cookies.set('useremail','')
+                Cookies.set('user_id','')
+                nevigate('/JobSeekerLogin')
+
+             }
+            
+    }
     return (
+        
         <>
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
                 <div className="container-fluid">
@@ -23,19 +47,28 @@ export default function Header() {
                                     Services
                                 </Link>
                                 <ul className="dropdown-menu">
-                                    <li><Link className="dropdown-item" to="/jobseekerRegister">Job Seeker</Link></li>
-                                    <li><Link className="dropdown-item" to="/recruiterRegister">Recruiter</Link></li>
+                                    <li><Link className="dropdown-item" to="/jobseekerLogin">Job Seeker</Link></li>
+                                    <li><Link className="dropdown-item" to="/recruiterLogin">Recruiter</Link></li>
 
                                 </ul>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/">Profile</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="/contact">Contact us</Link>
                             </li>
                         </ul>
-                        <form className="d-flex" role="search">
-                            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                            <button className="btn btn-outline-success" type="submit">Search</button>
-                        </form>
+                        <div className="d-flex" role="search">
+                            
+                            {
+                                (Cookies.get('isRecruiterLoggedIn')=='true' ||Cookies.get('isJobSeekerLoggedIn')=='true') && <button className="btn btn-outline-success" onClick={logout}>Log out</button> 
+                            }
+                            {
+                                (Cookies.get('isRecruiterLoggedIn')!='true' && Cookies.get('isJobSeekerLoggedIn')!='true' )&& <button className="btn btn-outline-success" onClick={logout} >Login</button>
+                            } 
+
+                        </div>
                     </div>
                 </div>
             </nav>

@@ -2,11 +2,12 @@ import Style from './Style.css'
 import img from './image/img.png'
 import mission from './image/mission.png'
 import vision from './image/vision.png'
+import Footer from './Footer'
 export default function Home() {
     return (
         <>
     
-            <div className='card'>
+            <div className='my-card'>
                 <div className='left-card center'>
                     <h2>SkyStarter CEO transforms recruitment, connecting talent for empowered career growth. </h2>
                     <p>SkyStarter is a dynamic and innovative platform dedicated to bridging the gap between talented job seekers and forward-thinking recruiters. As the Founder and CEO, I am proud to lead a team committed to revolutionizing the recruitment landscape by fostering meaningful connections and empowering individuals to achieve their career goals.   summarize this paragraph</p>
@@ -26,7 +27,7 @@ export default function Home() {
                     </p>
                 </div>
             </div>
-            <div className='card'>
+            <div className='my-card'>
                 <div className='left-card center'>
                     <h1>Our Vision</h1>
                     <p>
@@ -47,6 +48,7 @@ export default function Home() {
             document.getElementById('chat-button').style.display='none'}}>
                 <p><i className='fa fa-comment'></i> Chat with us</p>
             </div>
+            <Footer/>
         </>
 
     );
