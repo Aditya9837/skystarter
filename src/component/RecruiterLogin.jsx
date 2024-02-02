@@ -95,7 +95,7 @@ export default function RecruiterLogin() {
                             }
                         </div>
                         <br />
-                        <input type="submit" className="btn btn-primary" value='Login'></input>
+                        <input type="submit" className="btn" value='Login'></input>
                         <br/>
                         <Link to ='/otp' >Forgot password<i className="fa fa-question"></i> </Link>
                         <p>If You dont have account<i className="fa fa-question"></i> <Link to='/recruiterRegister'>&nbsp;click here</Link></p>

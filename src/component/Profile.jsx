@@ -93,6 +93,7 @@ function JobseekerProfile() {
                                 <button onClick={() => handleDeleteEducation(education.id)} className="delete-button">Delete</button>
                             </div>
                         </div>
+                        
                     ))}
                 </section>
                 <section className="profile-section">

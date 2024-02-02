@@ -146,7 +146,7 @@ export default function Contact() {
                             <textarea class="form-control" id="message" value={message} required onChange={UpdateMessage} rows="4" placeholder="Enter your message"></textarea>
                         </div>
                         <br />
-                        <button type="submit" class="btn btn-primary">Submit</button> <p id="please-wait" className="float-error">Please Wait</p>
+                        <button type="submit" class="btn ">Submit</button> <p id="please-wait" className="float-error">Please Wait</p>
                     </div>
 
                 </form >

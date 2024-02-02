@@ -34,7 +34,7 @@ function PrivacyPolicy() {
             <h2>7. Contact Us</h2>
             <p>If you have any questions or concerns about our Privacy Policy, please contact us at:</p>
             <ul>
-                <li>Email: info@example.com</li>
+                <li>Email: skystarter.life@gmail.com</li>
                 <li>Phone: +123-456-7890</li>
                 <li>Address: 123 Street, City, Country</li>
             </ul>

@@ -133,7 +133,7 @@ export default function AddExperience() {
 
                         <br />
                         <div>
-                            <input type='submit' value='Add' className='btn btn-primary' />
+                            <input type='submit' value='Add' className='btn' />
                         </div>
                     </div>
                 </form>

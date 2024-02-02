@@ -2,6 +2,7 @@
 
 import React, { useState,useRef } from 'react';
 import axios from 'axios';
+import Style from './Style.css'
 
 function OTPForm() {
     const [email, setEmail] = useState('');
@@ -83,7 +84,7 @@ function OTPForm() {
                         ))}
                     </div>
                     <br />
-                    <button type="submit" className='btn btn-warning'>Send OTP</button>
+                    <button type="submit" className='btn'>Send OTP</button>
                 </form>
 
             </div>

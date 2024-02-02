@@ -127,7 +127,7 @@ export default function Register() {
                 </div>
                 <br />
                 <div className=" jobs ">
-                    <button type="submit " className="btn btn-primary">Register</button>
+                    <button type="submit " className="btn">Register</button>
                     <h6 className="text-center error">&nbsp;&nbsp;{error}</h6>
                 </div>
                 <br/>

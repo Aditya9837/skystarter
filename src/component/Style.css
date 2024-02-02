@@ -16,16 +16,62 @@ body{
     height: 100vh; /* Set the height to 100% of the viewport height */
 }
 
+/* .btn{
+     
+      background-color: #28a745;
+      width: 50%;
+      padding-left: 20%;
+      padding-right: 20%;
+      align-items: center;
+      
+} */
+
+.btn {
+    background-color: #28a745;
+    width: fit-content; /* Adjust width as needed */
+    padding-left: auto;
+    padding-right: auto;
+    display: block;
+    margin: 0 auto; /* Centers the button horizontally */
+}
+
+.btn:hover{
+    background-color: #218838;
+}
 
 .blur{
-    padding: 10px;
+    padding: 20px;
     backdrop-filter: blur(5px);
     border: .2px solid rgb(203, 200, 200);
     border-radius: 5px;
-    box-shadow: 2px  4px 8px rgb(160, 149, 236);
+    box-shadow: 2px  4px 8px rgb(120, 118, 134);
 }
 
+.search-bar{
 
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    padding: 5px;
+    outline: none;
+    border: none;
+   
+}
+.search-div{
+    
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    z-index: 9999;
+    border: 1px solid black;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+
+}
+#edit-form{
+    display: none;
+}
 
 .icon-size {
     border-radius: 20px;
@@ -92,7 +138,7 @@ body{
     padding-left: 1%;
     padding-right: 1%;
     backdrop-filter: blur(5px);
-    
+    position: relative;
     width: 25%;
     height: 100vh;
     box-sizing: border-box;
@@ -167,8 +213,6 @@ body{
     display: flex;
     justify-content: space-around;
 }
-
-
 
 .maincontent {
 
@@ -249,14 +293,13 @@ body{
     border: none;
     background-color: transparent;
 }
-.google:hover {
-    color: rgb(244, 160, 0);
-}
+
 .form {
     padding-top: 20px;
     padding-bottom: 20px;
-    padding-left: 30%;
-    padding-right: 30%;
+    padding-left: 20%;
+    padding-right: 20%;
+    
 }
 .user-dp{
     width: 150px;

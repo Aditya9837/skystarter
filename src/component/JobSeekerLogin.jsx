@@ -91,7 +91,7 @@ export default function JobSeekerLogin() {
                         }
                     </div>
                     <br />
-                    <input type="submit" className="btn btn-primary" value='Login'></input>
+                    <input type="submit" className="btn" value='Login'></input>
                     <p>If You dont have account<i className="fa fa-question"></i> <Link to='/jobseekerRegister'>&nbsp;click here</Link></p>
                 </div>
             </form>
