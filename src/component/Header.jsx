@@ -65,10 +65,10 @@ export default function Header() {
                         <div className="d-flex" role="search">
                             
                             {
-                                (Cookies.get('isRecruiterLoggedIn')=='true' ||Cookies.get('isJobSeekerLoggedIn')=='true') && <button className="btn btn-outline-success" onClick={logout}>Log out</button> 
+                                (Cookies.get('isRecruiterLoggedIn')=='true' ||Cookies.get('isJobSeekerLoggedIn')=='true') && <button className="button " onClick={logout}>Log out</button> 
                             }
                             {
-                                (Cookies.get('isRecruiterLoggedIn')!='true' && Cookies.get('isJobSeekerLoggedIn')!='true' )&& <button className="btn btn-outline-success" onClick={logout} >Login</button>
+                                (Cookies.get('isRecruiterLoggedIn')!='true' && Cookies.get('isJobSeekerLoggedIn')!='true' )&& <button className="button" onClick={logout} >Login</button>
                             } 
 
                         </div>

@@ -16,36 +16,6 @@ body{
     height: 100vh; /* Set the height to 100% of the viewport height */
 }
 
-/* .btn{
-     
-      background-color: #28a745;
-      width: 50%;
-      padding-left: 20%;
-      padding-right: 20%;
-      align-items: center;
-      
-} */
-
-.btn {
-    background-color: #28a745;
-    width: fit-content; /* Adjust width as needed */
-    padding-left: auto;
-    padding-right: auto;
-    display: block;
-    margin: 0 auto; /* Centers the button horizontally */
-}
-
-.btn:hover{
-    background-color: #218838;
-}
-
-.blur{
-    padding: 20px;
-    backdrop-filter: blur(5px);
-    border: .2px solid rgb(203, 200, 200);
-    border-radius: 5px;
-    box-shadow: 2px  4px 8px rgb(120, 118, 134);
-}
 
 .search-bar{
 
@@ -294,24 +264,123 @@ body{
     background-color: transparent;
 }
 
-.form {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 20%;
-    padding-right: 20%;
-    
+/* CSS FOR ALL TYPE OF FORM */
+.whole-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    padding: 20px;
+    width: fit-content;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    background-color: #f0f0f0;
+
+    margin: 30px auto;
 }
+
+.animation-container {
+    width: 50%;
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.animation {
+    /* Add your animation styles here */
+    width: 400px;
+    height: 400px;
+    background-color: #f582ae;
+    /* border-radius: 5% 50% 50% 5% ; */
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0)), 
+                linear-gradient(-45deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+    background-size: 200% 200%;
+    animation: glassAnimation 2s linear infinite;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Outer shadow */
+}
+
+@keyframes glassAnimation {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 200% 200%;
+    }
+}
+.animation img {
+   height: 400px;
+   width: 400px;
+}
+
+.form-container {
+    width: 50%;
+    flex: 1;
+    padding: 20px;
+}
+
+.form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #fff;
+   background-color: green;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: rgb(4, 69, 4);
+}
+
+.button:active {
+    background-color: rgb(4, 69, 4);
+}
+
+p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+
+
 .user-dp{
     width: 150px;
     height: 150px;
     border-radius: 60px;
 }
-/* .data-card{
-    border-radius: 5px;
-    flex-grow: 3px;
-    box-shadow: 2px 4px 12px rgb(205, 200, 240);
-    background-color: rgb(234, 236, 242);
-} */
 
 .skill-card {
     background-color: #f8f9fa;

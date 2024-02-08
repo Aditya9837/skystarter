@@ -1,8 +1,11 @@
 import axios from "axios";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import logo from './image/logo.png'
 
 
 export default function Contact() {
+    const [error, setError] = useState('')
     const [name ,setName] = useState()
     const [email, setEmail] = useState()
     const [isvalidEmail, setvalidEmail] = useState(true)
@@ -110,48 +113,45 @@ export default function Contact() {
 
     return (
         <>
-         <div className='float-error' id='messageContainer'>
-          
-          </div>
-            <div class="container mt-5 pad10">
-
-
-
+         <div className="whole-form-container">
+            <div className="animation-container">
+                <div className="animation">
+                    <img src={logo} alt="Logo" />
+                </div>
+            </div>
+            <div className="form-container">
                 <form className="form" onSubmit={handleSubmit}>
-                    <div className="blur">
-                        <div className="logo-centered">
-                            <h2>Contact Us</h2>
-                        </div>
-                        <div class="form-group">
-                            <label htmlFor="name">Name</label>
-                            <input type="text" class="form-control" value={name} required onChange={UpdateName} id="name" placeholder="Enter your name" />
-                        </div>
-                        <div class="form-group">
-                            <label htmlFor="email">Email</label>
-                            <input type="email" class="form-control" value={email} required onChange={UpdateEmail} id="email" placeholder="Enter your email" />
-                            {
+                    <h1 className="form-title">Hello</h1>
+                    <div className="form-group">
+                        <label htmlFor='name'>Name:</label>
+                        <input type="text" className="form-control" name="name" id="name" placeholder="Enter your name" onChange={UpdateName}/>
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor='email'>Email:</label>
+                        <input type="email" className="form-control" name="email" id="email" placeholder="Enter your email" onChange={UpdateEmail}/>
+                        {
                                 !isvalidEmail && <label className="error" >Enter Valid Email</label>
                             }
-                        </div>
-                        <div class="form-group">
-                            <label htmlFor="phone">Phone</label>
-                            <input type="phone" class="form-control" value={phone} required onChange={UpdatePhone} id="phone" placeholder="Enter your mobile number" />
-                        </div>
-                        <div class="form-group">
-                            <label htmlFor="subject">Subject</label>
-                            <input type="text" class="form-control" value={subject} required onChange={UpdateSubject} id="subject" placeholder="Enter the subject" />
-                        </div>
-                        <div class="form-group">
-                            <label htmlFor="message">Message</label>
-                            <textarea class="form-control" id="message" value={message} required onChange={UpdateMessage} rows="4" placeholder="Enter your message"></textarea>
-                        </div>
-                        <br />
-                        <button type="submit" class="btn ">Submit</button> <p id="please-wait" className="float-error">Please Wait</p>
+
                     </div>
-
-                </form >
-
-            </div >
+                    <div className="form-group">
+                        <label htmlFor='phone'>Phone:</label>
+                        <input type="number" className="form-control" name="phone" id="phone" placeholder="Enter your phone number" onChange={UpdatePhone}/>
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor='subject'>Subject:</label>
+                        <input type="text" name="password" className="form-control" id="subject" placeholder="Enter your subject" onChange={UpdateSubject} />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor='message'>Message:</label>
+                        <input type="text" name="message" className="form-control" id="message" placeholder="Enter your message" onChange={UpdateEmail} />
+                    </div>
+                    <input type="submit" className="button"/>
+                    <h6 className="text-center error">{error}</h6>
+                    <p>Your Information is secured <Link to="/">Home</Link></p>
+                </form>
+            </div>
+        </div>
 
 
 

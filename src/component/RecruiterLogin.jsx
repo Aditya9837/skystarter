@@ -4,6 +4,7 @@ import Style from './Style.css'
 import { useNavigate } from "react-router-dom";
 import Cookies from 'js-cookie';
 import axios from "axios";
+import logo from './image/logo.png'
 export default function RecruiterLogin() {
     const nevigate=useNavigate()
     if(Cookies.get('isRecruiterLoggedIn')=='true'){
@@ -74,34 +75,36 @@ export default function RecruiterLogin() {
     return (
         <>
 
-            <form className="form" onSubmit={handleSubmit}>
-                <div className="blur">
-                    <div>
-                        <h1 className="logo-centered">Welcome,Recruiter</h1>
-                        <div className="form-group ">
-                            <label htmlFor='email'>Email:</label>
-                            <input type="email" className="form-control" name="email" id="email" onChange={UpdateEmail} placeholder="Enter your email"></input>
-
-                            {
-                                !isvalidEmail && <label className="error">Enter Valid Email</label>
-                            }
-                        </div>
-                        <br />
-                        <div className="form-group">
-                            <label htmlFor='password'>Password:</label>
-                            <input type="password" name="password" onChange={UpdatePassword} className="form-control" id="password" placeholder="Enter your password"></input>
-                            {
-                                !isvalidPassword && <label className="error">Enter Valid Password</label>
-                            }
-                        </div>
-                        <br />
-                        <input type="submit" className="btn" value='Login'></input>
-                        <br/>
-                        <Link to ='/otp' >Forgot password<i className="fa fa-question"></i> </Link>
-                        <p>If You dont have account<i className="fa fa-question"></i> <Link to='/recruiterRegister'>&nbsp;click here</Link></p>
-                    </div>
+<div className="whole-form-container">
+            <div className="animation-container">
+                {/* Add your animation or image card here */}
+                
+                <div className="animation">
+                    <img src={logo} />
                 </div>
-            </form>
+            </div>
+            <div className="form-container">
+                <form className="form" onSubmit={handleSubmit}>
+                    <h1 className="form-title">Welcome</h1>
+                    <div className="form-group">
+                        <label htmlFor='email'>Email:</label>
+                        <input type="email" className="form-control" name="email" id="email" placeholder="Enter your email" onChange={UpdateEmail} />
+                        {
+                            !isvalidEmail && <label className="error">Enter Valid Email</label>
+                        }
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor='password'>Password:</label>
+                        <input type="password" name="password" className="form-control" id="password" placeholder="Enter your password" onChange={UpdatePassword}/>
+                        {
+                            !isvalidPassword && <label className="error">Enter Valid Password</label>
+                        }
+                    </div>
+                    <input type="submit" className="button" value="Login" />
+                    <p>If You don't have an account,<i className="fa fa-question"></i>  <Link to='/recruiterRegister'>click here</Link></p>
+                </form>
+            </div>
+        </div>
         </>
     );
 }

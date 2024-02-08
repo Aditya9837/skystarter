@@ -6,7 +6,6 @@ import Footer from './Footer'
 export default function Home() {
     return (
         <>
-    
             <div className='my-card'>
                 <div className='left-card center'>
                     <h2>SkyStarter CEO transforms recruitment, connecting talent for empowered career growth. </h2>

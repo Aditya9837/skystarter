@@ -4,6 +4,7 @@ import Style from './Style.css'
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
+import logo from './image/logo.png'
 export default function JobSeekerLogin() {
     const nevigate = useNavigate()
     if (Cookies.get('isJobSeekerLoggedIn') == 'true') {
@@ -72,29 +73,36 @@ export default function JobSeekerLogin() {
     }
     return (
         <>
-            <form className="form" onSubmit={handleSubmit}>
-                <div className="blur">
-                    <h1 className="logo-centered">Welcome</h1>
+          <div className="whole-form-container">
+            <div className="animation-container">
+                {/* Add your animation or image card here */}
+                
+                <div className="animation">
+                    <img src={logo} />
+                </div>
+            </div>
+            <div className="form-container">
+                <form className="form" onSubmit={handleSubmit}>
+                    <h1 className="form-title">Welcome</h1>
                     <div className="form-group">
                         <label htmlFor='email'>Email:</label>
-                        <input type="email" className="form-control" name="email" onChange={UpdateEmail} id="email" placeholder="Enter your email"></input>
+                        <input type="email" className="form-control" name="email" id="email" placeholder="Enter your email" onChange={UpdateEmail} />
                         {
                             !isvalidEmail && <label className="error">Enter Valid Email</label>
                         }
                     </div>
-                    <br />
                     <div className="form-group">
                         <label htmlFor='password'>Password:</label>
-                        <input type="password" name="password" className="form-control" id="password" onChange={Updatepass} placeholder="Enter your password"></input>
+                        <input type="password" name="password" className="form-control" id="password" placeholder="Enter your password" onChange={Updatepass}/>
                         {
                             !isvalidPass && <label className="error">Enter Valid Password</label>
                         }
                     </div>
-                    <br />
-                    <input type="submit" className="btn" value='Login'></input>
-                    <p>If You dont have account<i className="fa fa-question"></i> <Link to='/jobseekerRegister'>&nbsp;click here</Link></p>
-                </div>
-            </form>
+                    <input type="submit" className="button" value="Login" />
+                    <p>If You don't have an account,<i className="fa fa-question"></i>  <Link to='/jobseekerRegister'>click here</Link></p>
+                </form>
+            </div>
+        </div>
         </>
     );
 }

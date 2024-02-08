@@ -84,7 +84,9 @@ function OTPForm() {
                         ))}
                     </div>
                     <br />
-                    <button type="submit" className='btn'>Send OTP</button>
+                    <div className='button-container'>
+                    <button type="submit" className='button'>Send OTP</button>
+                    </div>
                 </form>
 
             </div>

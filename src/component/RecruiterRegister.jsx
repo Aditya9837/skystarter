@@ -4,6 +4,7 @@ import Style from './Style.css'
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
+import logo from './image/logo.png'
 export default function Register() {
     const nevigate=useNavigate()
     if(Cookies.get('isRecruiterLoggedIn')=='true'){
@@ -104,45 +105,40 @@ export default function Register() {
     };
 
     return (<>
-        <form className="form" onSubmit={handleSubmit}>
-            <div className="blur">
-                <h1 className="logo-centered">Register&nbsp;now</h1>
-
-                <div className="">
-                    <label htmlFor="hr_name">HR Name</label>
-                    <input type="text" name='hr_name' placeholder="HR Name" onChange={Updatehr_name} className="form-control control" />
-                </div>
-                <div className="">
-                    <label htmlFor="company_name">Company Name</label>
-                    <input type="text" name='company_name' placeholder="Company Name" onChange={Updatecompany_name} className="form-control control" />
-                </div>
-
-                <div className="">
-                    <label htmlFor="email">Email</label>
-                    <input type="text" name='email' placeholder="Email" onChange={Update_email} className="form-control control" />
-                </div>
-                <div className="">
-                    <label htmlFor="password">Password</label>
-                    <input type="password" name='password' placeholder="Password" onChange={UpdatePassword} className="form-control control" />
-                </div>
-                <div className="">
-                    <label htmlFor="confirm_password">Confirm-Password</label>
-                    <input type="password" name='confirm_password' placeholder="Confirm Password" onChange={Updateconfirm_password} className="form-control control" />
-                </div>
-                <br />
-                <div className=" social-logo">
-                    <button type="submit " className="btn">Register</button>
-                    <h6 className="text-center error">{error}</h6>
-                </div>
-                <br/>
-                <div className=" social-logo">
-                    <p>If you have already register then  <Link to="/recruiterlogin">&nbsp;Click Here</Link> </p>
-                    
-                    
-                   
-                   
+         <div className="whole-form-container">
+            <div className="animation-container">
+                <div className="animation">
+                    <img src={logo} alt="Logo" />
                 </div>
             </div>
-        </form>
+            <div className="form-container">
+                <form className="form" onSubmit={handleSubmit}>
+                    <h1 className="form-title">Hi Recruiter Register now</h1>
+                    <div className="form-group">
+                        <label htmlFor='hr_name'>HR Name:</label>
+                        <input type="text" className="form-control" name="hr_name" id="hr_name" placeholder="Enter your Name" onChange={Updatehr_name}/>
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor='company_name'>Company Name:</label>
+                        <input type="text" className="form-control" name="company_name" id="company_name" placeholder="Enter your company name" onChange={Updatecompany_name}/>
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor='email'>Email:</label>
+                        <input type="email" className="form-control" name="email" id="email" placeholder="Enter your email" onChange={Update_email}/>
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor='password'>Password:</label>
+                        <input type="password" name="password" className="form-control" id="password" placeholder="Enter your password" onChange={UpdatePassword} />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor='confirm_password'>Confirm Password:</label>
+                        <input type="password" name="confirm_password" className="form-control" id="confirm_password" placeholder="Confirm your password" onChange={Updateconfirm_password} />
+                    </div>
+                    <input type="submit" className="button" value="Register" />
+                    <h6 className="text-center error">{error}</h6>
+                    <p>If you have already registered, <Link to="/recruiterLogin">click here</Link></p>
+                </form>
+            </div>
+        </div>
     </>);
 }
