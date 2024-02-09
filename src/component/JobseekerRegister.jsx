@@ -112,11 +112,11 @@ export default function Register() {
                 <form className="form" onSubmit={handleSubmit}>
                     <h1 className="form-title">Hi JobSeeker Register now</h1>
                     <div className="form-group">
-                        <label htmlFor='first_name'>Email:</label>
+                        <label htmlFor='first_name'>First Name:</label>
                         <input type="text" className="form-control" name="first_name" id="first_name" placeholder="Enter your email" onChange={Updatefirst_name}/>
                     </div>
                     <div className="form-group">
-                        <label htmlFor='last_name'>Email:</label>
+                        <label htmlFor='last_name'>Last Name:</label>
                         <input type="text" className="form-control" name="last_name" id="last_name" placeholder="Enter your email" onChange={Updatelast_name}/>
                     </div>
                     <div className="form-group">
